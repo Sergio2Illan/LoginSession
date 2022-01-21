@@ -21,8 +21,10 @@ class FirebaseViewModel {
             } else{
                 if let error = err?.localizedDescription {
                     print("Error: \(error)")
+                    completion(false)
                 }else {
                     print("Error App crashes")
+                    completion(false)
                 }
             }
         }
@@ -36,8 +38,10 @@ class FirebaseViewModel {
             } else{
                 if let error = err?.localizedDescription {
                     print("Error: \(error)")
+                    completion(false)
                 }else {
                     print("Error App crashes")
+                    completion(false)
                 }
             }
         }
