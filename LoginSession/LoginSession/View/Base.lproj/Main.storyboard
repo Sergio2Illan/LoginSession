@@ -187,92 +187,91 @@
         <!--Add Game-->
         <scene sceneID="V6e-e8-U6R">
             <objects>
-                <viewController id="wcS-G7-w8U" sceneMemberID="viewController">
+                <viewController id="wcS-G7-w8U" customClass="AddViewController" customModule="LoginSession" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BLL-B2-WSu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nxn-Zp-Vsp">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nxn-Zp-Vsp">
                                 <rect key="frame" x="20" y="120" width="374" height="34"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="34" id="MjR-Z0-EV1"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ut8-GP-5Wb">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ut8-GP-5Wb">
                                 <rect key="frame" x="20" y="162" width="374" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="WlM-nY-CLu"/>
-                                </constraints>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e3s-kg-h1a">
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e3s-kg-h1a">
                                 <rect key="frame" x="20" y="339" width="374" height="124"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="124" id="Egz-W6-ZwP"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="wcS-G7-w8U" id="tgo-Zk-oiv"/>
+                                    <outlet property="delegate" destination="wcS-G7-w8U" id="Z2C-7D-GsY"/>
+                                </connections>
                             </pickerView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="r6S-hp-qBq">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="photo" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="r6S-hp-qBq">
                                 <rect key="frame" x="87" y="567" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="systemPurpleColor"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3vX-AK-47y">
-                                <rect key="frame" x="87" y="493" width="240" height="31"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="31" id="baa-mo-WFa"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Load Image">
-                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="17"/>
-                                    <color key="baseForegroundColor" systemColor="systemPurpleColor"/>
-                                </buttonConfiguration>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="acd-ve-Mju">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="acd-ve-Mju">
                                 <rect key="frame" x="87" y="704" width="240" height="35"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="E3n-1P-zkr"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Save">
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="17"/>
                                     <color key="baseForegroundColor" systemColor="systemPurpleColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="handleSave:" destination="wcS-G7-w8U" eventType="touchUpInside" id="UW3-uU-usT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3vX-AK-47y">
+                                <rect key="frame" x="20" y="490" width="183" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="photo.circle" catalog="system" title="Load Image">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="17"/>
+                                    <color key="baseForegroundColor" systemColor="systemPurpleColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="handleLoadImage:" destination="wcS-G7-w8U" eventType="touchUpInside" id="4YH-Gt-6cd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6PB-es-L2E">
+                                <rect key="frame" x="211" y="487" width="183" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="camera.fill" catalog="system" title="Camera">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="17"/>
+                                    <color key="baseForegroundColor" systemColor="systemPurpleColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="handleLoadImage:" destination="wcS-G7-w8U" eventType="touchUpInside" id="GiL-V7-6Ze"/>
+                                    <action selector="tappedCameraButton:" destination="wcS-G7-w8U" eventType="touchUpInside" id="3fl-J5-PTW"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="HEv-Im-jly"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="Nxn-Zp-Vsp" firstAttribute="leading" secondItem="ut8-GP-5Wb" secondAttribute="leading" id="52h-3I-bMZ"/>
-                            <constraint firstItem="3vX-AK-47y" firstAttribute="top" secondItem="e3s-kg-h1a" secondAttribute="bottom" constant="30" id="55H-h5-bYJ"/>
-                            <constraint firstItem="ut8-GP-5Wb" firstAttribute="top" secondItem="Nxn-Zp-Vsp" secondAttribute="bottom" constant="8" id="74Y-MS-Dxi"/>
-                            <constraint firstItem="e3s-kg-h1a" firstAttribute="top" secondItem="ut8-GP-5Wb" secondAttribute="bottom" constant="49" id="A5N-h8-MfB"/>
-                            <constraint firstItem="ut8-GP-5Wb" firstAttribute="leading" secondItem="e3s-kg-h1a" secondAttribute="leading" id="AM9-Tu-Nef"/>
-                            <constraint firstItem="Nxn-Zp-Vsp" firstAttribute="trailing" secondItem="BLL-B2-WSu" secondAttribute="trailingMargin" id="BEJ-TX-ed5"/>
-                            <constraint firstItem="HEv-Im-jly" firstAttribute="bottom" secondItem="acd-ve-Mju" secondAttribute="bottom" constant="123" id="EFi-F5-nmW"/>
-                            <constraint firstItem="r6S-hp-qBq" firstAttribute="leading" secondItem="acd-ve-Mju" secondAttribute="leading" id="Egc-D5-Et9"/>
-                            <constraint firstItem="Nxn-Zp-Vsp" firstAttribute="trailing" secondItem="ut8-GP-5Wb" secondAttribute="trailing" id="MRn-S0-4nc"/>
-                            <constraint firstItem="acd-ve-Mju" firstAttribute="top" secondItem="r6S-hp-qBq" secondAttribute="bottom" constant="7.5" id="N9i-8N-naR"/>
-                            <constraint firstItem="r6S-hp-qBq" firstAttribute="top" secondItem="3vX-AK-47y" secondAttribute="bottom" constant="42" id="OWa-RY-D6I"/>
-                            <constraint firstItem="Nxn-Zp-Vsp" firstAttribute="leading" secondItem="BLL-B2-WSu" secondAttribute="leadingMargin" id="R1n-Je-Wc6"/>
-                            <constraint firstItem="ut8-GP-5Wb" firstAttribute="trailing" secondItem="e3s-kg-h1a" secondAttribute="trailing" id="Wxp-Wq-qxW"/>
-                            <constraint firstItem="3vX-AK-47y" firstAttribute="trailing" secondItem="r6S-hp-qBq" secondAttribute="trailing" id="i1D-vR-VPf"/>
-                            <constraint firstItem="3vX-AK-47y" firstAttribute="leading" secondItem="r6S-hp-qBq" secondAttribute="leading" id="lvy-JO-VMI"/>
-                            <constraint firstItem="3vX-AK-47y" firstAttribute="leading" secondItem="HEv-Im-jly" secondAttribute="leading" constant="87" id="nMU-Dt-ka4"/>
-                            <constraint firstItem="r6S-hp-qBq" firstAttribute="trailing" secondItem="acd-ve-Mju" secondAttribute="trailing" id="rac-Yq-X5G"/>
-                            <constraint firstItem="Nxn-Zp-Vsp" firstAttribute="top" secondItem="HEv-Im-jly" secondAttribute="top" constant="32" id="xi8-O0-SpO"/>
-                            <constraint firstItem="e3s-kg-h1a" firstAttribute="centerX" secondItem="3vX-AK-47y" secondAttribute="centerX" id="zlt-2P-mxs"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add Game" id="AZm-WI-Yko"/>
+                    <connections>
+                        <outlet property="desc" destination="ut8-GP-5Wb" id="Eb4-9f-6RE"/>
+                        <outlet property="image" destination="r6S-hp-qBq" id="55w-qG-EpI"/>
+                        <outlet property="platforms" destination="e3s-kg-h1a" id="Mdk-wf-3kM"/>
+                        <outlet property="tit" destination="Nxn-Zp-Vsp" id="JFp-Gs-Y2Y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2vG-0B-UfK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2417" y="84"/>
+            <point key="canvasLocation" x="2415.9420289855075" y="83.705357142857139"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="4Rz-G9-d8q">
@@ -282,6 +281,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="0Gs-K4-P8Y">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" systemColor="systemPurpleColor"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -295,7 +295,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="camera.fill" catalog="system" width="128" height="94"/>
         <image name="photo" catalog="system" width="128" height="93"/>
+        <image name="photo.circle" catalog="system" width="128" height="121"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

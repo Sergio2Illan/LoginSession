@@ -10,6 +10,7 @@
 		1F707BCD06081D9EFDDEBC79 /* Pods_LoginSession.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBC33A69FCC2AFC49BDED9BB /* Pods_LoginSession.framework */; };
 		5CFA56A3D55B34977EB75771 /* Pods_LoginSessionTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8035524A175C9782C43A88D /* Pods_LoginSessionTests.framework */; };
 		C1188201BD29E43207EC5662 /* Pods_LoginSession_LoginSessionUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 110E12459A36CD71920640BC /* Pods_LoginSession_LoginSessionUITests.framework */; };
+		E60AD2B2279B6C5A00F11756 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60AD2B1279B6C5A00F11756 /* AddViewController.swift */; };
 		E63B437E279B331B0083DE12 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63B437D279B331B0083DE12 /* HomeViewController.swift */; };
 		E63B4380279B33630083DE12 /* FirebaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63B437F279B33630083DE12 /* FirebaseViewModel.swift */; };
 		E63B4383279B3E090083DE12 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63B4382279B3E090083DE12 /* Extensions.swift */; };
@@ -51,6 +52,7 @@
 		968CC808BC3E3201B48C72AC /* Pods-LoginSessionTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginSessionTests.release.xcconfig"; path = "Target Support Files/Pods-LoginSessionTests/Pods-LoginSessionTests.release.xcconfig"; sourceTree = "<group>"; };
 		BB9ED6C0B44CC8B14C2B4782 /* Pods-LoginSession.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginSession.release.xcconfig"; path = "Target Support Files/Pods-LoginSession/Pods-LoginSession.release.xcconfig"; sourceTree = "<group>"; };
 		DBC33A69FCC2AFC49BDED9BB /* Pods_LoginSession.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoginSession.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E60AD2B1279B6C5A00F11756 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		E63B437D279B331B0083DE12 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		E63B437F279B33630083DE12 /* FirebaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseViewModel.swift; sourceTree = "<group>"; };
 		E63B4382279B3E090083DE12 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -122,6 +124,15 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		E60AD2B0279B6B3800F11756 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E68CC5D2279B03A8002FB60E /* Main.storyboard */,
+				E68CC5D7279B03AB002FB60E /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		E63B437B279B32C10083DE12 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -130,12 +141,14 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		E63B437C279B32D30083DE12 /* View */ = {
+		E63B437C279B32D30083DE12 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				E68CC5D0279B03A8002FB60E /* ViewController.swift */,
 				E63B437D279B331B0083DE12 /* HomeViewController.swift */,
+				E60AD2B1279B6C5A00F11756 /* AddViewController.swift */,
 			);
-			path = View;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		E63B4381279B3DF70083DE12 /* Utils */ = {
@@ -171,15 +184,13 @@
 		E68CC5CB279B03A8002FB60E /* LoginSession */ = {
 			isa = PBXGroup;
 			children = (
+				E60AD2B0279B6B3800F11756 /* View */,
 				E63B4381279B3DF70083DE12 /* Utils */,
-				E63B437C279B32D30083DE12 /* View */,
+				E63B437C279B32D30083DE12 /* Controllers */,
 				E63B437B279B32C10083DE12 /* ViewModel */,
 				E68CC5CC279B03A8002FB60E /* AppDelegate.swift */,
 				E68CC5CE279B03A8002FB60E /* SceneDelegate.swift */,
-				E68CC5D0279B03A8002FB60E /* ViewController.swift */,
-				E68CC5D2279B03A8002FB60E /* Main.storyboard */,
 				E68CC5D5279B03AB002FB60E /* Assets.xcassets */,
-				E68CC5D7279B03AB002FB60E /* LaunchScreen.storyboard */,
 				E68CC5DA279B03AB002FB60E /* Info.plist */,
 				E68CC5FC279B049E002FB60E /* GoogleService-Info.plist */,
 			);
@@ -445,6 +456,7 @@
 			files = (
 				E68CC5D1279B03A8002FB60E /* ViewController.swift in Sources */,
 				E63B4383279B3E090083DE12 /* Extensions.swift in Sources */,
+				E60AD2B2279B6C5A00F11756 /* AddViewController.swift in Sources */,
 				E68CC5CD279B03A8002FB60E /* AppDelegate.swift in Sources */,
 				E68CC5CF279B03A8002FB60E /* SceneDelegate.swift in Sources */,
 				E63B437E279B331B0083DE12 /* HomeViewController.swift in Sources */,

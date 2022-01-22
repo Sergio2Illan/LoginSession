@@ -11,7 +11,11 @@ import Firebase
 
 class FirebaseViewModel {
     
+    //MARK: - properties
+    
     public static let shared = FirebaseViewModel()
+    
+    //MARK: - signIn
     
     func login (email: String, pass: String, completion: @escaping (_ done: Bool) -> Void){
         Auth.auth().signIn(withEmail: email, password: pass) { user, err in
@@ -30,6 +34,8 @@ class FirebaseViewModel {
         }
     }
     
+    //MARK: - create user
+    
     func createUser(email: String, pass: String, completion: @escaping (_ done: Bool) -> Void) {
         Auth.auth().createUser(withEmail: email, password: pass) { user, err in
             if user != nil {
@@ -46,4 +52,17 @@ class FirebaseViewModel {
             }
         }
     }
+    
+    //MARK: - SignOut
+    
+    func signOut(completion: @escaping (_ done: Bool) -> ()){
+        do {
+            try Auth.auth().signOut()
+            completion(true)
+        } catch let error {
+            print("Error: \(error)")
+            completion(false)
+        }
+    }
+    
 }
