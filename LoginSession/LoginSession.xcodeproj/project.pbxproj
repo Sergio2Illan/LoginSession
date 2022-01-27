@@ -24,6 +24,7 @@
 		E68CC5EE279B03AC002FB60E /* LoginSessionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68CC5ED279B03AC002FB60E /* LoginSessionUITests.swift */; };
 		E68CC5F0279B03AC002FB60E /* LoginSessionUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68CC5EF279B03AC002FB60E /* LoginSessionUITestsLaunchTests.swift */; };
 		E68CC5FD279B049E002FB60E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E68CC5FC279B049E002FB60E /* GoogleService-Info.plist */; };
+		E68FC07527A2F0E70037E18E /* FirebaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68FC07427A2F0E70037E18E /* FirebaseModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		E68CC5ED279B03AC002FB60E /* LoginSessionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSessionUITests.swift; sourceTree = "<group>"; };
 		E68CC5EF279B03AC002FB60E /* LoginSessionUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSessionUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E68CC5FC279B049E002FB60E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E68FC07427A2F0E70037E18E /* FirebaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseModel.swift; sourceTree = "<group>"; };
 		F8035524A175C9782C43A88D /* Pods_LoginSessionTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoginSessionTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -184,6 +186,7 @@
 		E68CC5CB279B03A8002FB60E /* LoginSession */ = {
 			isa = PBXGroup;
 			children = (
+				E68FC07327A2EEC20037E18E /* Model */,
 				E60AD2B0279B6B3800F11756 /* View */,
 				E63B4381279B3DF70083DE12 /* Utils */,
 				E63B437C279B32D30083DE12 /* Controllers */,
@@ -212,6 +215,14 @@
 				E68CC5EF279B03AC002FB60E /* LoginSessionUITestsLaunchTests.swift */,
 			);
 			path = LoginSessionUITests;
+			sourceTree = "<group>";
+		};
+		E68FC07327A2EEC20037E18E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E68FC07427A2F0E70037E18E /* FirebaseModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -454,6 +465,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E68FC07527A2F0E70037E18E /* FirebaseModel.swift in Sources */,
 				E68CC5D1279B03A8002FB60E /* ViewController.swift in Sources */,
 				E63B4383279B3E090083DE12 /* Extensions.swift in Sources */,
 				E60AD2B2279B6C5A00F11756 /* AddViewController.swift in Sources */,
